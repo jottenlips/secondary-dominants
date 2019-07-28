@@ -25,3 +25,21 @@ for hearing common extensions in jazz.
 ## V7 (not the secondary dominant, really depends on the tune)
 * sound: "Rainbow"
 * extensions: [b9, 9, #9, 11, #11, b13, 13]
+
+
+# Basic Reason Template
+
+# Build
+```
+npm run build
+```
+
+# Build + Watch
+
+```
+npm run start
+```
+
+
+# Editor
+If you use `vscode`, Press `Windows + Shift + B` it will build automatically
