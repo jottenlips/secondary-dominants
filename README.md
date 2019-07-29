@@ -27,7 +27,7 @@ for hearing common extensions in jazz.
 * extensions: [b9, 9, #9, 11, #11, b13, 13]
 
 
-# Basic Reason Template
+# ReasonML
 
 # Build
 ```
