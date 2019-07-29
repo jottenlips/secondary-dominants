@@ -49,6 +49,19 @@ let notes = [
     "b"
 ]
 
+/* let getExtensionNotationForHalfStep = halfStep => {
+    switch (halfStep) {
+    | 1 = "b9"
+    | 2 => "9"
+    | 3 => "#9"
+    | 5 => "11"
+    | 6 => "#11"
+    | 8 => "b13"
+    | 9 => "13"
+    | _ => "0"
+    }
+} */
+
 let flatToSharp = note => {
     switch (note) {
     | "db" => "c#"
@@ -71,19 +84,6 @@ let sharpToFlat = note => {
     }
 }
 
-let extensions = note => {
-    switch (note) {
-    | 1 = "b9"
-    | 2 => "9"
-    | 3 => "#9"
-    | 5 => "11"
-    | 6 => "#11"
-    | 8 => "b13"
-    | 9 => "13"
-    | _ => note 
-    }
-}
-
 let absoluteValue = number => (number < 0) ? number * -1 : number
 let intervalDifference = (intervalA, intervalB) => absoluteValue(intervalA - intervalB);
 
@@ -95,7 +95,6 @@ let getChordPositionRelativeToKey = (~key, ~chordRoot) => {
     let intervalDifference = intervalDifference(rootNoteValue, keyNoteValue)
     let secondaryDominant = getSecondaryDominantValue(intervalDifference)
     Js.log(secondaryDominant)
-
 }
 
 getChordPositionRelativeToKey("a", "b")
